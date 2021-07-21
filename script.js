@@ -14,9 +14,12 @@ function captureText(){
 let typedText = document.getElementById("textInput").value;
 typedText = typedText.toLowerCase(); 
 typedText = typedText.replace(/[^a-z'\s]+/g, "");
+words = typedText.split(/\s/);
+
 
 
 countLetter(typedText);
+
 
 //words = typedText.split(/\s/); // essa vai separar as strings
 
@@ -47,11 +50,50 @@ function countLetter(typedText){
         const letters = document.getElementById("lettersDiv");
         letters.appendChild(span); 
     }
-        
+    
+    const wordCounts = {};
+
+    for (let i = 0; i < words.length; i++) {
+        let currentWord = words[i];//iterando sobre cada elemento da array
+            // faça algo com cada letra 
+      
+         //Ao encontrar uma letra pela primeira vez, você irá definir a contagem dela como 1. Caso contrário, adicionará um à contagem. Usar o conceito de array associativo
+        if (wordCounts[currentWord] === undefined) {
+            wordCounts[currentWord] = 1; 
+        }   else { 
+                wordCounts[currentWord]++; 
+            }
+    }   
+    
+    for (let word in wordCounts) { 
+        const span = document.createElement("span"); 
+        const textContent = `"${word}": ${wordCounts[word]}, `;
+        span.innerText = textContent; 
+        const finalWords = document.getElementById("wordsDiv");
+        finalWords.appendChild(span); 
+    }
+
+
+
+
+
+
+
+
 }
 
+
+
+
+
+  
+//fazer outra função que receba essa primeira passando words, só que faça o appendchild na wordsDiv
+
+
+
+
  //função para separar as strings
- words = typedText.split(/\s/);
+ 
 
 
 //captura o valor digitado no input

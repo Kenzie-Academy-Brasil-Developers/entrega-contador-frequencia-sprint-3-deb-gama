@@ -13,6 +13,8 @@
 
 #container textarea {
     width: 90%;
+    height: 350px;
+    font-size: 1.2em;
     border-radius: 3px;
     justify-content: center;
     align-items: center;
@@ -23,7 +25,7 @@
 
 .output {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 15px auto;  
+    margin: 0 auto;  
 }
 
 button {
@@ -32,11 +34,13 @@ button {
     color: var(--cor-fonte);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
-    height: 30px;
+    font-size: 1em;
+    height: 60px;
     border-radius: 5px;
     margin-top: 15px;
-    margin: 15px auto;
+    margin: 40px auto;
     cursor: pointer;
+    
 }
 
 button:hover {
@@ -47,6 +51,7 @@ h1 {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     color: var(--cor-fonte);
+    margin: 0 auto 50px;
 
 }
 
@@ -54,10 +59,19 @@ placeholder {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
+main {
+    font-size: 1.5em;
+}
+
 @media(min-width:768px){
     
+    main {
+        font-size: 1em;
+    }
+
     h1 {
-        margin: 0 auto 15px;
+        margin: 30px auto 30px;
     }
 }
 
