@@ -2,8 +2,11 @@
     --laranja:rgba(255, 190, 49, 0.918);
     --cor-fonte: rgba(41, 28, 1, 0.918);
     --hover: #dfba43;
+    --background: #f6ecc9;
 }
-
+body {
+    background-color: var(--background);
+}
 #container {
     width: 90%vw;
     margin: 0 auto;
@@ -25,7 +28,10 @@
 
 .output {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0 auto;  
+    text-align: center;
+    margin: 0 auto;
+    width: 90vw;
+    padding: 5px;
 }
 
 button {
@@ -34,12 +40,13 @@ button {
     color: var(--cor-fonte);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
-    font-size: 1em;
+    font-size: 1.5rem;
     height: 60px;
     border-radius: 5px;
     margin-top: 15px;
     margin: 40px auto;
     cursor: pointer;
+    width: 300px;
     
 }
 
@@ -51,18 +58,33 @@ h1 {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     color: var(--cor-fonte);
-    margin: 0 auto 50px;
-
+    margin: 0 auto;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 10px;
 }
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+
 
 placeholder {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
-main {
-    font-size: 1.5em;
+span {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
+
+
+
 
 @media(min-width:768px){
     
@@ -73,8 +95,20 @@ main {
     h1 {
         margin: 30px auto 30px;
     }
+    .output{
+        text-align: center;
+    }
+
+    span {
+        line-height: 1;
+    }
+
+    button {
+        width: 200px;
+        font-size: 1rem;
+        
+    }
+    
 }
 
-.output{
-    text-align: center;
-}
+

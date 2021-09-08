@@ -73,14 +73,8 @@ function countLetter(typedText){
         finalWords.appendChild(span); 
     }
 
-
-
-
-
-
-
-
 }
+
 
 
 
